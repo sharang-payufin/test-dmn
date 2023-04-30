@@ -21,26 +21,38 @@
     <dmn:extensionElements/>
     <dmn:variable id="_86A9196A-6805-441A-885C-69C0E46D6501" name="TaxiRide"/>
   </dmn:inputData>
-  <dmn:decision id="_5D80B6F1-8ABE-499A-842F-4736D0DE463D" name="Ride Calculation">
+  <dmn:decision id="_5D80B6F1-8ABE-499A-842F-4736D0DE463D" name="FareOp">
     <dmn:extensionElements/>
-    <dmn:variable id="_1DD71517-B4BE-4119-B912-F5AD6C8F6750" name="Ride Calculation"/>
+    <dmn:variable id="_1DD71517-B4BE-4119-B912-F5AD6C8F6750" name="FareOp" typeRef="Fare"/>
     <dmn:informationRequirement id="_9FA0C7FF-1DCB-49A2-9673-8774E3178B92">
       <dmn:requiredInput href="#_915D5748-4E06-4623-A411-19D55538F7E5"/>
     </dmn:informationRequirement>
     <dmn:decisionTable id="_835FCAE5-D926-45EC-AFF1-03880582E9BB" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_3ACFD5D6-5E87-4793-AD48-8A846626DC83">
-        <dmn:inputExpression id="_39DD766A-F013-4501-8993-12A253130BB6">
-          <dmn:text>TaxiRide</dmn:text>
+        <dmn:inputExpression id="_39DD766A-F013-4501-8993-12A253130BB6" typeRef="TaxiRide">
+          <dmn:text>TaxiRideIp.isNightSurcharge</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:output id="_0A488E5F-9E9C-4ADC-BD1A-5C2B03C3AF30"/>
+      <dmn:input id="_116FCAFE-515F-4243-B566-E78435708C5E">
+        <dmn:inputExpression id="_8541EE56-E961-4BF5-A065-F2FAEAD102CD" typeRef="TaxiRide">
+          <dmn:text>TaxiRideIp.distanceInMiles</dmn:text>
+        </dmn:inputExpression>
+      </dmn:input>
+      <dmn:output id="_E2A249E4-ED23-4D64-B324-E3552CC2E369" name="nightSurcharge" typeRef="number"/>
+      <dmn:output id="_0A488E5F-9E9C-4ADC-BD1A-5C2B03C3AF30" name="rideFare" typeRef="number"/>
       <dmn:annotation name="annotation-1"/>
-      <dmn:rule id="_1DA86A38-0EF9-4347-A7D4-7ECFF3E2F5CC">
-        <dmn:inputEntry id="_7F22E1AF-714C-4FED-97D7-A7EA2BA81C77">
-          <dmn:text>-</dmn:text>
+      <dmn:rule id="_50E785C6-21B2-418A-A2D5-32FB3FF455D4">
+        <dmn:inputEntry id="_311A4400-FE7B-4F00-B853-0781BD937950">
+          <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry id="_14F17039-3C7C-43BE-A215-283FAF972AF8">
-          <dmn:text/>
+        <dmn:inputEntry id="_6F8CE09E-8061-4F0F-B708-91F9EAB97514">
+          <dmn:text>&lt; 10</dmn:text>
+        </dmn:inputEntry>
+        <dmn:outputEntry id="_14CCADBB-0F62-4D3B-9FE5-3C7827D6072A">
+          <dmn:text>0</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_874E7EBC-0632-40B5-A29C-0D70E10679D8">
+          <dmn:text>70</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -54,6 +66,8 @@
         <kie:ComponentsWidthsExtension>
           <kie:ComponentWidths dmnElementRef="_835FCAE5-D926-45EC-AFF1-03880582E9BB">
             <kie:width>50</kie:width>
+            <kie:width>243</kie:width>
+            <kie:width>188</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
