@@ -12,6 +12,13 @@
       <dmn:requiredInput href="#_30C163C1-BFF6-436F-A27C-33EBEB51B579"/>
     </dmn:informationRequirement>
   </dmn:decision>
+  <dmn:association id="_3132F480-79EB-4678-AED7-F238595262BF" associationDirection="None">
+    <dmn:sourceRef href="#_09BFDB10-F963-4D98-AC69-0B64D3669E54"/>
+    <dmn:targetRef href="#_FC59D255-92BC-4D11-BD24-A3A5966CEB5E"/>
+  </dmn:association>
+  <dmn:textAnnotation id="_FC59D255-92BC-4D11-BD24-A3A5966CEB5E" textFormat="text/plain">
+    <dmn:text>TextAnnotation-1</dmn:text>
+  </dmn:textAnnotation>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram id="_0CB03297-D5B0-4E9A-A091-E1F92AB349A1" name="DRG">
       <di:extension>
@@ -35,9 +42,22 @@
         <dc:Bounds x="789" y="187" width="100" height="50"/>
         <dmndi:DMNLabel/>
       </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-drg-_FC59D255-92BC-4D11-BD24-A3A5966CEB5E" dmnElementRef="_FC59D255-92BC-4D11-BD24-A3A5966CEB5E" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="969" y="187" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
       <dmndi:DMNEdge id="dmnedge-drg-_3BEF2FB4-CAF9-47C1-B38C-BD75735F4D69-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="_3BEF2FB4-CAF9-47C1-B38C-BD75735F4D69">
         <di:waypoint x="839" y="317"/>
         <di:waypoint x="839" y="237"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-drg-_3132F480-79EB-4678-AED7-F238595262BF-AUTO-SOURCE-AUTO-TARGET" dmnElementRef="_3132F480-79EB-4678-AED7-F238595262BF">
+        <di:waypoint x="889" y="212"/>
+        <di:waypoint x="969" y="212"/>
       </dmndi:DMNEdge>
     </dmndi:DMNDiagram>
   </dmndi:DMNDI>
