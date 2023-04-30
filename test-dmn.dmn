@@ -17,25 +17,25 @@
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:inputData id="_915D5748-4E06-4623-A411-19D55538F7E5" name="TaxiRideIp">
+  <dmn:inputData id="_915D5748-4E06-4623-A411-19D55538F7E5" name="taxiRide">
     <dmn:extensionElements/>
-    <dmn:variable id="_86A9196A-6805-441A-885C-69C0E46D6501" name="TaxiRideIp"/>
+    <dmn:variable id="_86A9196A-6805-441A-885C-69C0E46D6501" name="taxiRide"/>
   </dmn:inputData>
-  <dmn:decision id="_5D80B6F1-8ABE-499A-842F-4736D0DE463D" name="FareOp">
+  <dmn:decision id="_5D80B6F1-8ABE-499A-842F-4736D0DE463D" name="rideFare">
     <dmn:extensionElements/>
-    <dmn:variable id="_1DD71517-B4BE-4119-B912-F5AD6C8F6750" name="FareOp" typeRef="Fare"/>
+    <dmn:variable id="_1DD71517-B4BE-4119-B912-F5AD6C8F6750" name="rideFare" typeRef="Fare"/>
     <dmn:informationRequirement id="_9FA0C7FF-1DCB-49A2-9673-8774E3178B92">
       <dmn:requiredInput href="#_915D5748-4E06-4623-A411-19D55538F7E5"/>
     </dmn:informationRequirement>
     <dmn:decisionTable id="_835FCAE5-D926-45EC-AFF1-03880582E9BB" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_3ACFD5D6-5E87-4793-AD48-8A846626DC83">
         <dmn:inputExpression id="_39DD766A-F013-4501-8993-12A253130BB6" typeRef="TaxiRide">
-          <dmn:text>TaxiRideIp.isNightSurcharge</dmn:text>
+          <dmn:text>taxiRide.isNightSurcharge</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:input id="_116FCAFE-515F-4243-B566-E78435708C5E">
         <dmn:inputExpression id="_8541EE56-E961-4BF5-A065-F2FAEAD102CD" typeRef="TaxiRide">
-          <dmn:text>TaxiRideIp.distanceInMiles</dmn:text>
+          <dmn:text>taxiRide.distanceInMiles</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_E2A249E4-ED23-4D64-B324-E3552CC2E369" name="nightSurcharge" typeRef="number"/>
