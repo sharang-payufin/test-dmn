@@ -17,9 +17,9 @@
       <dmn:typeRef>number</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:inputData id="_915D5748-4E06-4623-A411-19D55538F7E5" name="TaxiRide">
+  <dmn:inputData id="_915D5748-4E06-4623-A411-19D55538F7E5" name="TaxiRideIp">
     <dmn:extensionElements/>
-    <dmn:variable id="_86A9196A-6805-441A-885C-69C0E46D6501" name="TaxiRide"/>
+    <dmn:variable id="_86A9196A-6805-441A-885C-69C0E46D6501" name="TaxiRideIp"/>
   </dmn:inputData>
   <dmn:decision id="_5D80B6F1-8ABE-499A-842F-4736D0DE463D" name="FareOp">
     <dmn:extensionElements/>
